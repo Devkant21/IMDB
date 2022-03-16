@@ -10,12 +10,13 @@ import SearchIcon from './search.svg'
 //   "Year" : "2016",
 //   "imdbID" : "tt2975590"
 // }
+const API_URL = process.env.REACT_APP_API_KEY
 
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm ] =useState('');
 
-  const API_URL = process.env.REACT_APP_API_KEY
+  
 
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
