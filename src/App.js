@@ -13,6 +13,7 @@ const movie1 = {
 
 const App = () => {
   const [movies, setMovies] = useState([]);
+  const [searchTerm, setSearchTerm ] =useState('');
 
   const API_URL = process.env.REACT_APP_API_KEY
 
@@ -32,13 +33,13 @@ const App = () => {
       <div className="search">
         <input
           placeholder="Search Movies" 
-          value = "Batman"
-          onChange={() => {}}
+          value = {searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
         <img 
         src = {SearchIcon}
         alt = "search"
-        onClick={() => {}}
+        onClick={() => searchMovies(searchTerm)}
         />
       </div>
       {
