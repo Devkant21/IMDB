@@ -11,7 +11,7 @@ import SearchIcon from './search.svg'
 //   "imdbID" : "tt2975590"
 // }
 const API = process.env.REACT_APP_API_KEY;
-const API_URL = `http://www.omdbapi.com/?i=tt3896198&apikey=${API}`
+const API_URL = `https://www.omdbapi.com/?i=tt3896198&apikey=${API}`
 
 const App = () => {
   const [movies, setMovies] = useState([]);
